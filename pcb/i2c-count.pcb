@@ -6,7 +6,7 @@ FileVersion[20070407]
 PCB["" 50000 50000]
 
 Grid[500.0 0 0 0]
-Cursor[0 0 0.000000]
+Cursor[2500 9500 0.000000]
 PolyArea[200000000.000000]
 Thermal[0.500000]
 DRC[600 600 600 800 2000 800]
@@ -917,8 +917,6 @@ Layer(1 "component")
 	Line[20500 34000 16000 34000 800 2000 "clearline"]
 	Line[21457 33043 20500 34000 800 2000 "clearline"]
 	Line[21457 30579 21457 33043 800 2000 "clearline"]
-	Line[34177 30677 40000 35000 800 2000 "clearline"]
-	Line[30315 30677 34177 30677 800 2000 "clearline"]
 	Line[7500 45500 30000 45500 800 2000 "clearline"]
 	Line[4500 42500 7500 45500 800 2000 "clearline"]
 	Line[4500 33500 4500 42500 800 2000 "clearline"]
@@ -957,6 +955,8 @@ Layer(1 "component")
 	Line[34457 19457 35500 20500 800 2000 "clearline"]
 	Line[10000 35000 13457 38457 2500 2000 "clearline"]
 	Line[13457 38457 21000 38457 2500 2000 "clearline"]
+	Line[30315 30677 35677 30677 1000 2000 "clearline"]
+	Line[35677 30677 40000 35000 1000 2000 "clearline"]
 	Polygon("clearpoly")
 	(
 		[22500 33000] [34500 33000] [34500 36000] [22500 36000] 
@@ -1006,8 +1006,8 @@ Layer(2 "solder")
 	Line[24000 19000 25000 20000 600 2000 "clearline"]
 	Line[25000 20000 43000 20000 600 2000 "clearline"]
 	Line[43000 20000 45500 22500 600 2000 "clearline"]
-	Line[21500 5500 19000 7500 800 2000 "clearline"]
-	Line[19000 7500 14000 7500 800 2000 "clearline"]
+	Line[21500 5500 19500 7500 800 2000 "clearline"]
+	Line[19500 7500 14000 7500 800 2000 "clearline"]
 	Line[14000 7500 11000 4500 800 2000 ""]
 	Line[21500 10500 20000 9000 800 2000 "clearline"]
 	Line[20000 9000 13000 9000 800 2000 "clearline"]
@@ -1069,12 +1069,12 @@ NetList()
 		Connect("R1-1")
 		Connect("U1-25")
 	)
-	Net("CNT0" "(unknown)")
+	Net("CNTA" "(unknown)")
 	(
 		Connect("J2-2")
 		Connect("U1-2")
 	)
-	Net("CNT1" "(unknown)")
+	Net("CNTB" "(unknown)")
 	(
 		Connect("J2-3")
 		Connect("U1-7")
