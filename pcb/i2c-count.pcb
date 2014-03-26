@@ -6,11 +6,11 @@ FileVersion[20070407]
 PCB["" 50000 50000]
 
 Grid[500.0 0 0 0]
-Cursor[2500 9500 0.000000]
+Cursor[0 0 0.000000]
 PolyArea[200000000.000000]
 Thermal[0.500000]
 DRC[600 600 600 800 2000 800]
-Flags("showdrc,rubberband,nameonpcb,clearnew,snappin")
+Flags("showdrc,rubberband,nameonpcb,clearnew")
 Groups("1,c:2,s:3")
 Styles["Signal,1000,3600,2000,1000:Power,2500,6000,3500,1000:Fat,4000,6000,3500,1000:Skinny,600,3600,2000,1000"]
 
@@ -937,8 +937,7 @@ Layer(1 "component")
 	Line[25000 30579 25000 9000 800 2000 ""]
 	Line[28543 15422 28543 12957 800 2000 "clearline"]
 	Line[28543 12957 30500 11000 800 2000 "clearline"]
-	Line[30500 11000 37000 11000 800 2000 ""]
-	Line[37000 11000 41000 15000 800 2000 ""]
+	Line[30500 11000 40000 11000 800 2000 ""]
 	Line[23228 30579 23228 34000 800 2000 ""]
 	Line[34000 14000 32500 15500 800 2000 "clearline"]
 	Line[32500 15500 30315 15500 800 2000 "clearline"]
@@ -967,7 +966,7 @@ Layer(1 "component")
 	)
 	Polygon("clearpoly")
 	(
-		[49000 11000] [37000 11000] [37000 15000] [49000 15000] 
+		[49000 10000] [37000 10000] [37000 15000] [49000 15000] 
 	)
 	Polygon("clearpoly")
 	(
@@ -1053,8 +1052,8 @@ Layer(5 "silk")
 	Text[48500 24500 3 85 "A" "clearline"]
 	Text[48500 34000 3 85 "B" "clearline"]
 	Text[7000 34000 3 100 "-" "clearline"]
-	Text[6500 24000 3 85 "C" "clearline"]
-	Text[6500 14000 3 85 "D" "clearline"]
+	Text[6500 10500 3 85 "SDA" "clearline"]
+	Text[6500 22000 3 85 "SCL" "clearline"]
 	Polygon("clearpoly")
 	(
 		[16000 30500] [17500 30500] [17500 32000] [16000 32000] 
