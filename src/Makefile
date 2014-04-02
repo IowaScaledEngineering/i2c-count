@@ -34,11 +34,13 @@ FUSE_L  = 0xFF
 FUSE_H  = 0xDE
 FUSE_E  = 0x05
 
+I2C_DIRECTORY=../../../../mrbus/libs/avr-i2c
+
 # I2C_CMD_BUFFER_SIZE must be a power of 2 (% in depth function)
 DEFINES = -DI2C_NUMPAGES=2 -DI2C_CMD_BUFFER_SIZE=4 -DI2C_ENABLE_PAGE -DI2C_ENABLE_CML
 LDFLAGS = 
-SRCS = $(BASE_NAME).c i2c/avr-i2c-cmdslave.c
-INCS = i2c.h i2c/avr-i2c-cmdslave.h
+SRCS = $(BASE_NAME).c $(I2C_DIRECTORY)/avr-i2c-cmdslave.c
+INCS = i2c.h $(I2C_DIRECTORY)/avr-i2c-cmdslave.h
 
 AVRDUDE = avrdude -c usbtiny -p $(DEVICE) -B1
 AVRDUDE_SLOW = avrdude -c usbtiny -p $(DEVICE) -B32
@@ -46,7 +48,7 @@ AVRDUDE_SLOW = avrdude -c usbtiny -p $(DEVICE) -B32
 #AVRDUDE_SLOW = avrdude -c dragon_isp -P usb -p $(DEVICE) -B32
 
 OBJS = ${SRCS:.c=.o}
-INCLUDES = -I. -I./i2c/
+INCLUDES = -I. -I$(I2C_DIRECTORY)
 CFLAGS  = $(INCLUDES) -Wall -Os -std=gnu99
 
 COMPILE = avr-gcc $(DEFINES) -DF_CPU=$(F_CPU) $(CFLAGS) -mmcu=$(DEVICE)
